@@ -1,100 +1,131 @@
 :root {
+  /* Typography */
   --oui-font-family: 'Manrope', sans-serif;
   --oui-font-size-base: 16px;
 
-  /* colors */
-  --oui-color-primary: 176 132 233;
-  --oui-color-primary-light: 213 190 244;
-  --oui-color-primary-darken: 137 76 209;
-  --oui-color-primary-contrast: 255 255 255;
+  /* Primary Colors - Gold Theme */
+  --oui-color-primary: 212 175 55;       /* Classic Gold #D4AF37 */
+  --oui-color-primary-light: 230 211 133; /* Light Gold #E6D385 */
+  --oui-color-primary-darken: 180 145 28; /* Dark Gold #B4911C */
+  --oui-color-primary-contrast: 14 13 18; /* Deep background for contrast */
+  
+  --oui-color-link: 255 215 0;           /* Bright Gold Links #FFD700 */
+  --oui-color-link-light: 255 229 102;   /* Light Gold Links */
+  
+  --oui-color-secondary: 255 255 255;    /* White */
+  --oui-color-tertiary: 218 218 218;     /* Light Gray */
+  --oui-color-quaternary: 185 185 185;   /* Medium Gray */
 
-  --oui-color-link: 189 107 237;
-  --oui-color-link-light: 217 152 250;
-
-  --oui-color-secondary: 255 255 255;
-  --oui-color-tertiary: 218 218 218;
-  --oui-color-quaternary: 218 218 218;
-
-  --oui-color-danger: 245 97 139;
+  /* Danger Colors - Maintain visibility */
+  --oui-color-danger: 245 97 139;        /* Pink Red for losses */
   --oui-color-danger-light: 250 167 188;
   --oui-color-danger-darken: 237 72 122;
   --oui-color-danger-contrast: 255 255 255;
 
-  --oui-color-success: 41 233 169;
+  /* Success Colors - Green for profits */
+  --oui-color-success: 41 233 169;       /* Success Green */
   --oui-color-success-light: 101 240 194;
   --oui-color-success-darken: 0 161 120;
   --oui-color-success-contrast: 255 255 255;
 
-  --oui-color-warning: 255 209 70;
+  /* Warning Colors */
+  --oui-color-warning: 255 209 70;       /* Gold Yellow */
   --oui-color-warning-light: 255 229 133;
   --oui-color-warning-darken: 255 152 0;
-  --oui-color-warning-contrast: 255 255 255;
+  --oui-color-warning-contrast: 14 13 18;
 
-  --oui-color-fill: 36 32 47;
-  --oui-color-fill-active: 40 46 58;
+  /* Background Colors - Deep Professional */
+  --oui-color-fill: 22 20 28;            /* Deep background */
+  --oui-color-fill-active: 36 32 47;     /* Active background */
+  
+  /* Base Colors - Grayscale with gold accents */
+  --oui-color-base-1: 255 255 255;       /* Pure white text */
+  --oui-color-base-2: 230 230 230;       /* Near white */
+  --oui-color-base-3: 180 180 180;       /* Light gray */
+  --oui-color-base-4: 140 140 140;       /* Medium gray */
+  --oui-color-base-5: 100 100 100;       /* Dark gray */
+  --oui-color-base-6: 70 70 70;          /* Darker gray */
+  --oui-color-base-7: 50 50 50;          /* Very dark */
+  --oui-color-base-8: 36 32 47;          /* Deep purple tint */
+  --oui-color-base-9: 29 26 38;          /* Deeper background */
+  --oui-color-base-10: 14 13 18;         /* Deepest background */
+  
+  --oui-color-base-foreground: 255 255 255; /* White text */
+  --oui-color-line: 212 175 55;          /* Gold lines #D4AF37 */
 
-  --oui-color-base-1: 93 83 123;
-  --oui-color-base-2: 81 72 107;
-  --oui-color-base-3: 68 61 69;
-  --oui-color-base-4: 57 52 74;
-  --oui-color-base-5: 51 46 66;
-  --oui-color-base-6: 43 38 56;
-  --oui-color-base-7: 36 32 47;
-  --oui-color-base-8: 29 26 38;
-  --oui-color-base-9: 22 20 28;
-  --oui-color-base-10: 14 13 18;
-
-  --oui-color-base-foreground: 255 255 255;
-  --oui-color-line: 255 255 255;
-
-  --oui-color-trading-loss: 245 97 139;
+  /* Trading Colors - Profit & Loss */
+  --oui-color-trading-loss: 245 97 139;  /* Red for losses */
   --oui-color-trading-loss-contrast: 255 255 255;
-  --oui-color-trading-profit: 41 233 169;
+  --oui-color-trading-profit: 41 233 169; /* Green for profits */
   --oui-color-trading-profit-contrast: 255 255 255;
 
-  /* gradients */
-  --oui-gradient-primary-start: 40 0 97;
-  --oui-gradient-primary-end: 189 107 237;
+  /* Gradients - Gold Focus */
+  /* Primary Gradient - Gold to Deep Gold */
+  --oui-gradient-primary-start: 212 175 55;  /* Classic Gold */
+  --oui-gradient-primary-end: 180 145 28;    /* Dark Gold */
+  
+  /* Secondary Gradient - Gold to Navy */
+  --oui-gradient-secondary-start: 212 175 55; /* Gold */
+  --oui-gradient-secondary-end: 0 51 102;     /* Navy Blue */
+  
+  /* Success Gradient */
+  --oui-gradient-success-start: 0 161 120;    /* Dark Green */
+  --oui-gradient-success-end: 41 233 169;     /* Bright Green */
+  
+  /* Danger Gradient */
+  --oui-gradient-danger-start: 153 24 76;     /* Dark Pink */
+  --oui-gradient-danger-end: 245 97 139;      /* Bright Pink */
+  
+  /* Brand Gradient - Premium Gold */
+  --oui-gradient-brand-start: 255 229 102;    /* Light Gold */
+  --oui-gradient-brand-end: 212 175 55;       /* Classic Gold */
+  --oui-gradient-brand-stop-start: 0%;
+  --oui-gradient-brand-stop-end: 100%;
+  --oui-gradient-brand-angle: 135deg;
+  
+  /* Warning Gradient */
+  --oui-gradient-warning-start: 255 215 0;    /* Bright Gold */
+  --oui-gradient-warning-end: 255 152 0;      /* Orange Gold */
+  
+  /* Neutral Gradient - Deep Professional */
+  --oui-gradient-neutral-start: 14 13 18;     /* Deep background */
+  --oui-gradient-neutral-end: 36 32 47;       /* Lighter background */
 
-  --oui-gradient-secondary-start: 81 42 121;
-  --oui-gradient-secondary-end: 176 132 233;
-
-  --oui-gradient-success-start: 1 83 68;
-  --oui-gradient-success-end: 41 223 169;
-
-  --oui-gradient-danger-start: 153 24 76;
-  --oui-gradient-danger-end: 245 97 139;
-
-  --oui-gradient-brand-start: 231 219 249;
-  --oui-gradient-brand-end: 159 107 225;
-  --oui-gradient-brand-stop-start: 6.62%;
-  --oui-gradient-brand-stop-end: 86.5%;
-  --oui-gradient-brand-angle: 17.44deg;
-
-  --oui-gradient-warning-start: 152 58 8;
-  --oui-gradient-warning-end: 255 209 70;
-
-  --oui-gradient-neutral-start: 27 29 24;
-  --oui-gradient-neutral-end: 38 41 46;
-
-  /* rounded */
-  --oui-rounded-sm: 2px;
-  --oui-rounded: 4px;
-  --oui-rounded-md: 6px;
-  --oui-rounded-lg: 8px;
-  --oui-rounded-xl: 12px;
-  --oui-rounded-2xl: 16px;
+  /* Border Radius */
+  --oui-rounded-sm: 4px;
+  --oui-rounded: 8px;
+  --oui-rounded-md: 12px;
+  --oui-rounded-lg: 16px;
+  --oui-rounded-xl: 20px;
+  --oui-rounded-2xl: 24px;
   --oui-rounded-full: 9999px;
 
-  /* spacing */
-  --oui-spacing-xs: 20rem;
-  --oui-spacing-sm: 22.5rem;
-  --oui-spacing-md: 26.25rem;
-  --oui-spacing-lg: 30rem;
-  --oui-spacing-xl: 33.75rem;
+  /* Spacing */
+  --oui-spacing-xs: 0.25rem;
+  --oui-spacing-sm: 0.5rem;
+  --oui-spacing-md: 1rem;
+  --oui-spacing-lg: 1.5rem;
+  --oui-spacing-xl: 2rem;
 }
 
 html, body {
   font-family: 'Manrope', sans-serif !important;
   font-size: 16px !important;
+  background: rgb(14, 13, 18); /* Deep base-10 */
+  color: rgb(255, 255, 255);
+}
+
+/* Additional Brand Styling */
+.app-header {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* Subtle gold border */
+}
+
+.primary-button {
+  background: linear-gradient(135deg, rgb(255, 229, 102), rgb(212, 175, 55));
+  color: rgb(14, 13, 18);
+  font-weight: 600;
+}
+
+.primary-button:hover {
+  background: linear-gradient(135deg, rgb(212, 175, 55), rgb(180, 145, 28));
 }
